@@ -1,0 +1,21 @@
+POST http://localhost:9092/oauth/token?grant_type=password&username=admin&password=123456
+Content-Type: application/json
+Authorization: Basic Y29kZXJlZjokMmEkMTAkcDlQazBmUU5BUVNlc0k0dnV2S0EwT1phbkREMg==
+
+###
+
+GET http://localhost:9595/api/catalog/product HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer 95f3e304-8cf5-4209-a96e-333c12aba520
+
+###
+
+POST http://localhost:9595/api/catalog/product HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer 95f3e304-8cf5-4209-a96e-333c12aba520
+
+{
+    "code": "5555",
+    "name": "Product name",
+    "description": "Product description"
+}
